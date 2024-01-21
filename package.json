@@ -1,0 +1,24 @@
+{
+  "name": "ahj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "coursar",
+  "license": "ISC",
+  "engines": {
+    "node": "12.x"
+  },
+  "devDependencies": {
+    "koa-router": "^12.0.1"
+  },
+  "dependencies": {
+    "@koa/cors": "^5.0.0",
+    "http-event-stream": "^0.2.0",
+    "koa": "^2.14.2",
+    "koa-body": "^6.0.1",
+    "koa-static": "^5.0.0",
+    "mime-types": "^2.1.35",
+    "uuid": "^9.0.1"
+  }
+}
