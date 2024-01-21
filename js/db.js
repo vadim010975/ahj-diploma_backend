@@ -59,7 +59,13 @@ const db = {
   },
 
   loadHistory(folder) {
-    const folders = fs.readdirSync(public);
+    const elements = fs.readdirSync(public);
+
+    const folders = elements.filter(element => {
+      const stats = fs.statSync(public + '/' + element);
+      if (stats.isDirectory()) return true;
+    });
+
     const arrayLength = folders.length;
 
     folders.sort();
