@@ -1,16 +1,10 @@
-const fs = require('fs');
 const http = require('http');
 const Koa = require('koa');
 const { koaBody } = require('koa-body');
 const koaStatic = require('koa-static');
 const path = require('path');
-const { v4 } = require('uuid');
 const cors = require('@koa/cors');
-const { streamEvents } = require('http-event-stream');
 const db = require('./js/db.js');
-const { accessSync, constants } = require('node:fs');
-
-let lastFolder;
 
 const app = new Koa();
 
@@ -75,9 +69,6 @@ app.use((ctx, next) => {
     
     return;
   }
-
-  // console.log(ctx.request.body);
-  // console.log(ctx.request.files);
 
   let fileData;
 
